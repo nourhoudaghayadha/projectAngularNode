@@ -1,0 +1,34 @@
+<app-nav-bar></app-nav-bar>
+<body>
+  <div class="container">
+    <div class="row p-4">
+      <div class="col-3">
+        <!-- Left Spacer -->
+      </div>
+  
+      <div class="col">
+        <h2 class="form-title">Create New Product</h2>  <!-- Title for the form -->
+        <form #f="ngForm" (submit)="save()">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label">Product Name:</label>
+            <input type="text" name="name" [(ngModel)]="produit.name" class="form-control m-1" />
+          </div>
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label">Product Price:</label>
+            <input type="number" name="price" [(ngModel)]="produit.price" class="form-control m-1" />
+          </div>
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label">Product Quantity:</label>
+            <input type="number" name="quantity" [(ngModel)]="produit.quantity" class="form-control m-1" />
+          </div>
+          <button class="btn form-control btn-primary">Create</button>
+        </form>
+      </div>
+  
+      <div class="col-3">
+        <!-- Right Spacer -->
+      </div>
+    </div>
+  </div>
+</body>
+

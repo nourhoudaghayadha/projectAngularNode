@@ -1,0 +1,46 @@
+<app-nav-bar></app-nav-bar>
+<body>
+  <div class="container">
+    <form class="d-flex" role="search" #s="ngForm" (submit)="search()">
+      <input class="form-control me-2" name="ProductName" [(ngModel)]="ProductName" (input)="search()" type="search"
+        placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    <div *ngIf="products && products.length > 0">
+      <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col align-items-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; let i = index">
+        
+        <td>{{ product._id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>
+          <div class="container text-start">
+            <div class="row justify-content-start">
+              <div class="col">
+                <button type="button" class="btn btn-outline-primary" [routerLink]="['/UpdateProduct',product._id]" >Edite</button>
+              <button type="button" class="btn btn-outline-success" [routerLink]="['/Details',product._id]">Details</button>
+              <button type="button" class="btn btn-outline-danger" (click)="delete(product._id)">Delete</button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="!products || products.length === 0">
+  <h1>There are No Products</h1>
+</div>
+</div>
+</body>

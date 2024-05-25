@@ -1,0 +1,60 @@
+/* Ensure the entire body content is centered */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #ececee;
+    background-color: #1f2029; /* Fallback color */
+    overflow: hidden;
+    background-image: url('../../assets/apply_now_mobile.webp');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover; /* Change to cover to see if it makes the image visible */
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* Specific styles for the form container */
+  .container {
+    width: 100%; /* Full width */
+    max-width:650px; /* Maximum width */
+    margin-top: 2%; /* Top margin */
+    padding: 30px; /* Padding around the form */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    background-color: #ffffff; /* White background */
+    border-radius: 15px; /* Rounded corners */
+  }
+  
+  /* Styling form elements */
+  .form-control {
+    margin: 0px 0; /* Vertical spacing */
+    padding: 15px; /* Internal padding */
+    font-size: 16px; /* Font size */
+  }
+  
+  .form-title {
+    text-align: center; /* Center alignment */
+    color: #007bff; /* Color of the title */
+    margin-bottom: 20px; /* Space below the title */
+    font-size: 24px; /* Size of the title */
+    font-weight: bold; /* Change font weight to bold */
+}
+.form-label
+{
+   
+    color: #5c6aee; /* Color of the title */
+    font-size: 15px; /* Size of the title */
+   
+}
+  
+  /* Button styling */
+  .btn-primary {
+    width: 100%; /* Full width */
+    padding: 15px 10px; /* Padding */
+    border: none; /* No border */
+    background-color: #007bff; /* Background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer on hover */
+  }
+  
